@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>signup</class>
+ <widget class="QWidget" name="signup">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string> MeiTuo - 外卖美食</string>
+  </property>
+  <widget class="QPushButton" name="returnButton">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>450</y>
+     <width>401</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgba(64, 145, 252, 255), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>返回登录</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>30</y>
+     <width>311</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 28pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>即刻加入！</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="surePasswordLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>300</y>
+     <width>400</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 247);
+border:1px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 10pt &quot;Candara&quot;;</string>
+   </property>
+   <property name="placeholderText">
+    <string>Ensure Your Password</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sureButton">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>380</y>
+     <width>401</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgba(64, 145, 252, 255), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>确认注册</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="usernameLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>120</y>
+     <width>400</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(247, 247, 247);
+border:1px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 10pt &quot;Candara&quot;;</string>
+   </property>
+   <property name="placeholderText">
+    <string>Username</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="passwordLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>210</y>
+     <width>400</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(247, 247, 247);
+border:1px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 10pt &quot;Candara&quot;;</string>
+   </property>
+   <property name="placeholderText">
+    <string>Password</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

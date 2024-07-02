@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>usercheck</class>
+ <widget class="QWidget" name="usercheck">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string> MeiTuo - 外卖美食</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 主窗口样式 */
+QMainWindow {
+    background-color: #f0f0f0;
+}
+
+/* 按钮样式 */
+QPushButton {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+    background-color: #0056b3;
+}
+
+/* 输入框样式 */
+QLineEdit {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* 列表和表格样式 */
+QListWidget, QTableWidget {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+QListWidget::item, QTableWidget::item {
+    padding: 10px;
+}
+
+QListWidget::item:selected, QTableWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 统一字体 */
+* {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}</string>
+  </property>
+  <widget class="QListWidget" name="orderListWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>180</y>
+     <width>501</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+font: 10pt &quot;等线&quot;;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px; /* 内边距 */
+}
+
+QListWidget::item {
+    padding: 8px; /* 项目内边距 */
+    margin: 3px 0; /* 项目上下间距 */
+}
+
+QListWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="profileTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>40</y>
+     <width>371</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: italic 16pt &quot;Times New Roman&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="ratingSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>400</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;等线&quot;;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="maximum">
+    <number>5</number>
+   </property>
+   <property name="singleStep">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="rateOrderButton">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>400</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgb(255, 85, 127), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>评分</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelOrderButton">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>340</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgba(64, 145, 252, 255), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>退订</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="reloadButton">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>460</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgb(255, 255, 127), 
+stop:1 rgba(255, 255, 255, 255));
+color: gray;
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>刷新</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>460</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgb(255, 255, 127), 
+stop:1 rgba(255, 255, 255, 255));
+color: gray;
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="orderDetailsListWidget">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>180</y>
+     <width>351</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+font: 9pt &quot;等线&quot;;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px; /* 内边距 */
+}
+
+QListWidget::item {
+    padding: 8px; /* 项目内边距 */
+    margin: 3px 0; /* 项目上下间距 */
+}
+
+QListWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="detailsButton">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>340</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgba(64, 145, 252, 255), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>详情</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>651</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 24pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>你的订单 你做主</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>100</y>
+     <width>181</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>历史订单</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_3">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>100</y>
+     <width>181</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>订单详情</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

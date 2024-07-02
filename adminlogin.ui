@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>adminlogin</class>
+ <widget class="QWidget" name="adminlogin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>444</width>
+    <height>260</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string> MeiTuo - 外卖美食</string>
+  </property>
+  <widget class="QPushButton" name="logInBotton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>190</y>
+     <width>391</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgba(64, 145, 252, 255), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>身份验证</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="passwordLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>391</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(247, 247, 247);
+border:1px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 10pt &quot;Candara&quot;;</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>PASSWORD</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="nameLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>391</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(247, 247, 247);
+border:1px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 10pt &quot;Candara&quot;;</string>
+   </property>
+   <property name="placeholderText">
+    <string>ADMINISTRATOR</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

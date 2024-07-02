@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>userdashboard</class>
+ <widget class="QWidget" name="userdashboard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string> MeiTuo - 外卖美食</string>
+  </property>
+  <widget class="QPushButton" name="confirmOrderButton">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>450</y>
+     <width>301</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgba(64, 145, 252, 255), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>提交订单</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="manageOrderButton">
+   <property name="geometry">
+    <rect>
+     <x>649</x>
+     <y>30</y>
+     <width>121</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 9pt &quot;方正东港宋 简 Medium&quot;;
+background-color: #ffffff;
+    color: gray;
+    border-radius: 5px;
+    padding: 10px;</string>
+   </property>
+   <property name="text">
+    <string>我的订单</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="foodListWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>190</y>
+     <width>471</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+font: 12pt &quot;等线&quot;;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px; /* 内边距 */
+}
+
+QListWidget::item {
+    padding: 10px; /* 项目内边距 */
+    margin: 4px 0; /* 项目上下间距 */
+}
+
+QListWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="merchantComboBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>120</y>
+     <width>471</width>
+     <height>55</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;等线&quot;;
+background-color: white;
+    color: gray;
+    border-radius: 5px;
+    padding: 10px;</string>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>420</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12t &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addButton">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>470</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgba(64, 145, 252, 255), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 10pt &quot;方正东港宋 简 Medium&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>加购</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="quantitySpinBox">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>420</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;等线&quot;;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="currentOrderListWidget">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>180</y>
+     <width>301</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+font: 12pt &quot;等线&quot;;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px; /* 内边距 */
+}
+
+QListWidget::item {
+    padding: 10px; /* 项目内边距 */
+    margin: 4px 0; /* 项目上下间距 */
+}
+
+QListWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="logOutButton">
+   <property name="geometry">
+    <rect>
+     <x>809</x>
+     <y>30</y>
+     <width>121</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 9pt &quot;方正东港宋 简 Medium&quot;;
+background-color: #ffffff;
+    color: gray;
+    border-radius: 5px;
+    padding: 10px;</string>
+   </property>
+   <property name="text">
+    <string>安全登出</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>10</y>
+     <width>651</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 87 24pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>琳琅满目 随你挑</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>110</y>
+     <width>181</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>购物车</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

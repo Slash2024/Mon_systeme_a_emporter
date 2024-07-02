@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>adminconsole</class>
+ <widget class="QWidget" name="adminconsole">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string> MeiTuo - 外卖美食</string>
+  </property>
+  <widget class="QPushButton" name="addMerchantButton">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>400</y>
+     <width>141</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgba(64, 145, 252, 255), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>添加商家</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addFoodButton">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>400</y>
+     <width>141</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgba(64, 145, 252, 255), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>添加菜品</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="userLogOutButton">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>800</y>
+     <width>301</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgb(255, 85, 127), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>注销用户</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="userResetPassword">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>720</y>
+     <width>301</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgb(255, 85, 127), 
+stop:1 rgba(255, 255, 255, 255));
+color: rgb(255, 255, 255);
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>重置密码</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelOrderButton">
+   <property name="geometry">
+    <rect>
+     <x>1270</x>
+     <y>380</y>
+     <width>271</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgb(255, 255, 127), 
+stop:1 rgba(255, 255, 255, 255));
+color: gray;
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>撤销订单</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="userListWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>640</y>
+     <width>511</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+font: 10pt &quot;等线&quot;;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px; /* 内边距 */
+}
+
+QListWidget::item {
+    padding: 8px; /* 项目内边距 */
+    margin: 3px 0; /* 项目上下间距 */
+}
+
+QListWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="reloadButton">
+   <property name="geometry">
+    <rect>
+     <x>1320</x>
+     <y>20</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;方正东港宋 简 Medium&quot;;
+background-color: #ffffff;
+    color: gray;
+    border-radius: 5px;
+    padding: 10px;</string>
+   </property>
+   <property name="text">
+    <string>刷新与数据统计</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="newPasswordLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>640</y>
+     <width>301</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(247, 247, 247);
+border:1px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 10pt &quot;Candara&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="placeholderText">
+    <string>New Password</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="orderListWidget">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>160</y>
+     <width>381</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+font: 10pt &quot;等线&quot;;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px; /* 内边距 */
+}
+
+QListWidget::item {
+    padding: 8px; /* 项目内边距 */
+    margin: 3px 0; /* 项目上下间距 */
+}
+
+QListWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="orderDetailsListWidget">
+   <property name="geometry">
+    <rect>
+     <x>1330</x>
+     <y>160</y>
+     <width>211</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+font: 10pt &quot;等线&quot;;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px; /* 内边距 */
+}
+
+QListWidget::item {
+    padding: 8px; /* 项目内边距 */
+    margin: 3px 0; /* 项目上下间距 */
+}
+
+QListWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="detailsButton">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>380</y>
+     <width>271</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.52, y1:1, x2:0.54, y2:0, 
+stop:0.0112994 rgb(255, 255, 127), 
+stop:1 rgba(255, 255, 255, 255));
+color: gray;
+ 
+border:0px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 14pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>订单详情</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="merchantListWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>160</y>
+     <width>281</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+font: 10pt &quot;等线&quot;;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px; /* 内边距 */
+}
+
+QListWidget::item {
+    padding: 8px; /* 项目内边距 */
+    margin: 3px 0; /* 项目上下间距 */
+}
+
+QListWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="newMerchantLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>160</y>
+     <width>300</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(247, 247, 247);
+border:1px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 10pt &quot;Candara&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="placeholderText">
+    <string>New Merchant</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="foodListWidget">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>160</y>
+     <width>221</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {
+font: 10pt &quot;等线&quot;;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px; /* 内边距 */
+}
+
+QListWidget::item {
+    padding: 8px; /* 项目内边距 */
+    margin: 3px 0; /* 项目上下间距 */
+}
+
+QListWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="newFoodLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>240</y>
+     <width>300</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(247, 247, 247);
+border:1px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 10pt &quot;Candara&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="placeholderText">
+    <string>New Food</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="newPriceLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>320</y>
+     <width>300</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(247, 247, 247);
+border:1px groove gray;border-radius:
+7px;padding:2px 4px;
+font: 10pt &quot;Candara&quot;;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Price</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>1320</x>
+     <y>80</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;方正东港宋 简 Medium&quot;;
+background-color: #ffffff;
+    color: gray;
+    border-radius: 5px;
+    padding: 10px;</string>
+   </property>
+   <property name="text">
+    <string>退出管理员模式</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>10</y>
+     <width>791</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16pt &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>商家 &amp; 菜品管理区</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>90</y>
+     <width>321</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>商家列表</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_4">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>90</y>
+     <width>571</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>在售菜单</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_5">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>490</y>
+     <width>521</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16pt &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>用户信息管理区</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_6">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>560</y>
+     <width>321</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>用户名 - 密码列表</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_7">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>10</y>
+     <width>341</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16pt &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>订单管理区</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_8">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>90</y>
+     <width>291</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;等线&quot;;</string>
+   </property>
+   <property name="text">
+    <string>历史订单存档</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="totalAmountLabel_9">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>610</y>
+     <width>611</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 64pt &quot;方正东港宋 简 Medium&quot;;</string>
+   </property>
+   <property name="text">
+    <string>MeiTuo</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
